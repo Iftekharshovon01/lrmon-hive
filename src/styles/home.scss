@@ -1,0 +1,227 @@
+// @import "global";
+// @import "var";
+// @import "fonts";
+
+.grass {
+    background: #9BCC50;
+    border-radius: 5px;
+    padding: 4px 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.poison {
+    background: #B97FC9;
+    border-radius: 5px;
+    padding: 4px 20px;
+    color: white;
+    font-size: 14px;
+
+
+}
+
+.padding {
+    padding: 0;
+}
+
+
+.pokemon {
+    padding-top: 68px;
+    position: relative;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        width: 100%;
+        padding-bottom: 103px;
+
+        img {
+
+            height: 100%;
+            ;
+            object-fit: cover;
+        }
+    }
+
+    .col {
+        flex: 0 0 20%;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        transform: translateY(0%);
+        background-image: url(../images/dynamic/Background.png);
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__single {
+        background-color: #ffffff;
+        clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 196%, 0% 35%, 237% 45%, 0% 108%);
+        padding: 10px;
+        margin-bottom: 70px;
+        border-radius: 10px;
+
+        a {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            -webkit-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+            cursor: pointer;
+        }
+
+        &__img {
+            // padding: 10px;
+            position: relative;
+            padding-top: calc(215 / 215 *100%);
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                background-color: #f2f2f2;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: all 0.6s cubic-bezier(0.4, 0, 0, 1);
+            }
+        }
+
+        &__text {
+            margin-top: 16px;
+
+            h4 {
+                margin-bottom: 0 !important;
+            }
+
+            &__power {
+                margin-top: 8px;
+                gap: 8px;
+            }
+
+        }
+
+        &__id {
+            // position: absolute;
+            // top: 16px;
+            // left: 26px;
+
+
+            position: absolute;
+            // left: 11.06%;
+            right: 74.47%;
+            top: 8.47%;
+            bottom: 86.32%;
+
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            /* identical to box height */
+
+
+            color: #000000;
+        }
+
+        &:hover {
+            background-color: #3383C8;
+
+            img {
+                transition: all 0.6s cubic-bezier(0.4, 0, 0, 1);
+                transform: scale(1.10);
+            }
+        }
+
+    }
+
+
+}
+
+.blog_section {
+
+    &__img {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .col-md-1 {
+        padding: 0px;
+    }
+
+    &__header {
+        width: 100%;
+        padding-top: 95px;
+        display: flex;
+        justify-content: center;
+
+        &__content_header {
+
+            width: 50%;
+            text-align: center;
+            position: relative;
+
+            &:before {
+                background-image: url(../images/dynamic/Brush.png);
+                position: absolute;
+                content: "";
+                margin-left: 0px;
+                margin-right: 0px;
+                transform: translateX(-15%);
+
+                height: 100%;
+                width: 100%;
+                background-repeat: no-repeat;
+
+            }
+        }
+    }
+
+    &__blog {
+        padding-top: 65px;
+        padding-bottom: 10px;
+        gap: 10px;
+
+        &__text {
+            font-size: 12px;
+            line-height: 14px;
+
+        }
+
+        &__imag {
+            width: 135%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                padding-bottom: 10px;
+            }
+        }
+
+        &__img {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
